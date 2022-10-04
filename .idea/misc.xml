@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Damian/Documents/GitHub/Class_Tinder/app/src/main/res/drawable/default_button.xml" value="0.4185" />
+        <entry key="..\:/Users/Damian/Documents/GitHub/Class_Tinder/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4185" />
+        <entry key="..\:/Users/Damian/Documents/GitHub/Class_Tinder/app/src/main/res/layout/calander.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Damian/Documents/GitHub/Class_Tinder/app/src/main/res/layout/home.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Damian/Documents/GitHub/Class_Tinder/app/src/main/res/layout/swipe.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/jonah/AndroidStudioProjects/ClassTinder/app/src/main/res/drawable/default_button.xml" value="0.195" />
         <entry key="..\:/Users/jonah/AndroidStudioProjects/ClassTinder/app/src/main/res/font/.xml" value="0.2171875" />
         <entry key="..\:/Users/jonah/AndroidStudioProjects/ClassTinder/app/src/main/res/font/font.xml" value="0.1" />
