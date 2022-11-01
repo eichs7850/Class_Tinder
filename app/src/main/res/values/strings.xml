@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Class Tinder</string>
+    <string name="back_btn">Back</string>
+    <string name="calendar_title"><b>Your Schedule</b></string>
+    <string name="calendar_monday">Monday</string>
+    <string name="calendar_tuesday">Tuesday</string>
+    <string name="calendar_wednesday">Wednesday</string>
+    <string name="calendar_thursday">Thursday</string>
+    <string name="calendar_friday">Friday</string>
+    <string name="calendar_7am">7am</string>
+    <string name="calendar_8am">8am</string>
+    <string name="calendar_9am">9am</string>
+    <string name="calendar_10am">10am</string>
+    <string name="calendar_11am">11am</string>
+    <string name="calendar_12pm">12pm</string>
+    <string name="calendar_1pm">1pm</string>
+    <string name="calendar_2pm">2pm</string>
+    <string name="calendar_3pm">3pm</string>
+    <string name="calendar_4pm">4pm</string>
+    <string name="calendar_5pm">5pm</string>
+    <string name="calendar_6pm">6pm</string>
+    <string name="calendar_7pm">7pm</string>
+    <string name="calendar_8pm">8pm</string>
+    <string name="calendar_9pm">9pm</string>
+    <string name="calendar_10pm">10pm</string>
+    <string name="calendar_11pm">11pm</string>
+    <string name="calendar_12am">12am</string>
 </resources>
