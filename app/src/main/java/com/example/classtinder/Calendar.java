@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -11,8 +12,11 @@ import android.widget.LinearLayout;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Calendar extends Activity {
     @Override
@@ -24,10 +28,13 @@ public class Calendar extends Activity {
         View calendarTimeLine = findViewById(R.id.calendarTimeLine);
 
         //Get the list of courses HashMap
-        Intent intent = getIntent();
-        HashMap<String, Double[]> hashMap = (HashMap<String, Double[]>) intent.getSerializableExtra("listOfCourses");
+
+        Map<String, Pair<Double[], String[]>> hashMap = Bridge.instance().listOfCourses;
         Log.d("lol", hashMap.toString());
-        Log.d("first input", hashMap.get("MA238")[0].toString());
+        Double[] classTimes = hashMap.get("MA238").first;
+        String[] classDays = hashMap.get("MA238").second;
+        Log.d("MA238 Times", Arrays.toString(classTimes));
+        Log.d("MA238 Days", Arrays.toString(classDays));
         //good luck chandler my code is shit
 
         // Set the placement of the calendar time view
