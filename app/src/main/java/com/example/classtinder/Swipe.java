@@ -18,16 +18,17 @@ import java.util.Map;
 public class Swipe extends Activity {
     private SwipeDeck cardStack;
     private ArrayList<CourseModal> courseModalArrayList;
-    Map<String, Pair<Double[], String[]>> emptyCourses = new HashMap<>();
+    Map<String, Pair<String[], String[]>> listOfCourses = new HashMap<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.swipe);
         courseModalArrayList = new ArrayList<>();
-        cardStack = (SwipeDeck) findViewById(R.id.swipe_deck);
+        cardStack = findViewById(R.id.swipe_deck);
 
         // on below line we are adding data to our array list.
-        courseModalArrayList.add(new CourseModal("C++", "30 days", new String[] {"20 Tracks"}, new String[] {"C++ Self Paced Course"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("C++", "30 days", new String[] {"Monday", "Wednesday"}, new String[] {"4:30pm", "5:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("Java", "30 days", new String[] {"20 Tracks"}, new String[] {"Java Self Paced Course"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("Python", "30 days", new String[] {"20 Tracks"}, new String[] {"Python Self Paced Course"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("DSA", "30 days", new String[] {"20 Tracks"}, new String[] {"DSA Self Paced Course"}, R.drawable.laurierlogo));
@@ -50,6 +51,8 @@ public class Swipe extends Activity {
             public void cardSwipedRight(int position) {
                 // on card swiped to right we are displaying a toast message.
                 Toast.makeText(Swipe.this, "Card Swiped Right", Toast.LENGTH_SHORT).show();
+                listOfCourses.put(courseModalArrayList.get(position).getCourseName(), new Pair<>(courseModalArrayList.get(position).getCourseDays(), courseModalArrayList.get(position).getCourseTimes()));
+
             }
 
             @Override
@@ -61,6 +64,9 @@ public class Swipe extends Activity {
             public void cardsDepleted() {
                 // this method is called when no card is present
                 Toast.makeText(Swipe.this, "No more courses present", Toast.LENGTH_SHORT).show();
+                Bridge.instance().listOfCourses = listOfCourses;
+                Intent intent = new Intent(Swipe.this, Calendar.class);
+                startActivity(intent);
             }
 
             public void cardActionDown() {
@@ -73,10 +79,7 @@ public class Swipe extends Activity {
                 Log.i("TAG", "CARDS MOVED UP");
             }
         });
-        Map<String, Pair<Double[], String[]>> listOfCourses = addCourses(emptyCourses);
-        Bridge.instance().listOfCourses = listOfCourses;
-//        Intent intent = new Intent(Swipe.this, Calendar.class);
-//        startActivity(intent);
+
     }
 
     private static Map<String, Pair<Double[], String[]>> addCourses(Map<String, Pair<Double[], String[]>> listOfCourses) {

@@ -29,12 +29,12 @@ public class Calendar extends Activity {
 
         //Get the list of courses HashMap
 
-        Map<String, Pair<Double[], String[]>> hashMap = Bridge.instance().listOfCourses;
-        Log.d("lol", hashMap.toString());
-        Double[] classTimes = hashMap.get("MA238").first;
-        String[] classDays = hashMap.get("MA238").second;
-        Log.d("MA238 Times", Arrays.toString(classTimes));
-        Log.d("MA238 Days", Arrays.toString(classDays));
+        Map<String, Pair<String[], String[]>> hashMap = Bridge.instance().listOfCourses;
+        for (Map.Entry<String, Pair<String[], String[]>> entry : hashMap.entrySet()) {
+            Log.d("iterating key", entry.getKey());
+            Log.d("iterating value", entry.getValue().first[0]);
+            Log.d("iterating other value", entry.getValue().second[0]);
+        }
         //good luck chandler my code is shit
 
         // Set the placement of the calendar time view
