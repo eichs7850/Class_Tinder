@@ -1,25 +1,23 @@
 package com.example.classtinder;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
-import com.google.android.material.snackbar.Snackbar;
-
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
 
 public class Calendar extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,8 +80,8 @@ public class Calendar extends Activity {
 
                 //Publish the course to the schedule on all days listed
                 for(int i = 0; i < entry.getValue().second.length; i++) {
-                    Button tester = new Button(this);
-                    tester.setText(entry.getKey());
+                    Button dynamicBtn = new Button(this);
+                    dynamicBtn.setText(entry.getKey());
                     int day = dayGridGetter.get(entry.getValue().second[i]);
 
                     //get the resource dynamically:
@@ -93,19 +91,24 @@ public class Calendar extends Activity {
                     Integer margin = (Integer.parseInt(entry.getValue().first[0].substring(0,2)) - 8) * 168 + (int) ((Integer.parseInt(entry.getValue().first[0].substring(3,5))) * 2.8) + 143; //149 is the default pixel size of the first grid from 7-8am
 
                     lp.setMargins(0,margin,0,0);
-                    ll.addView(tester, lp);
-
+                    ll.addView(dynamicBtn, lp);
 
                     //Create a dynamic popup listener
-                    PopupWindow popUp = new PopupWindow(this);
-                    LinearLayout layout = new LinearLayout(this);
-                    boolean click = false;
-                    tester.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), tester.getText(), Snackbar.LENGTH_LONG);
-                            snackbar.show();
-                        }
+                    dynamicBtn.setOnClickListener(view -> {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                        builder.setTitle(entry.getKey());
+                        builder.setMessage("Course Days: " + Arrays.toString(entry.getValue().second));
+                        AlertDialog dialog = builder.create();
+                        dialog.show();
+
+                        /*AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_ClassTinder);
+                        View popupView = LayoutInflater.from(this).inflate(R.layout.calendar_course_popup, (LinearLayout)findViewById(R.id.customCoursePopup));
+                        builder.setView(popupView);
+                        ((TextView) popupView.findViewById(R.id.courseNamePopupTV)).setText("balls");
+                        Button popupBackButton = findViewById(R.id.popupBackButton);
+                        AlertDialog coursePopupAlert = builder.create();
+                        coursePopupAlert.show();*/
+
                     });
 
                 }
