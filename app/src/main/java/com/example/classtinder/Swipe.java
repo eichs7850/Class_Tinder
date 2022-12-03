@@ -28,7 +28,9 @@ public class Swipe extends Activity {
         cardStack = findViewById(R.id.swipe_deck);
 
         // on below line we are adding data to our array list.
-        courseModalArrayList.add(new CourseModal("C++", "30 days", new String[] {"Monday", "Wednesday"}, new String[] {"4:30pm", "5:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("C++", "30 days", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("SQL", "30 days", new String[] {"Monday", "Tuesday"}, new String[] {"10:30am", "12:00pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("Sack", "30 days", new String[] {"Wednesday", "Friday"}, new String[] {"11:30am", "12:30pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("Java", "30 days", new String[] {"20 Tracks"}, new String[] {"Java Self Paced Course"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("Python", "30 days", new String[] {"20 Tracks"}, new String[] {"Python Self Paced Course"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("DSA", "30 days", new String[] {"20 Tracks"}, new String[] {"DSA Self Paced Course"}, R.drawable.laurierlogo));
