@@ -100,38 +100,38 @@ public class Swipe extends Activity {
     }
 
     private static ArrayList<CourseModal> loadUXCourses(ArrayList<CourseModal> courseModalArrayList) {
-        courseModalArrayList.add(new CourseModal("UX340", "Understanding the human computer interaction", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "8:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("UX340", "Understanding the human computer interaction", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("UX118", "Thinking like a designer in the real world", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("UX458", "Researching the artificial mind", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("UX403", "Designing products for businesses", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
-        courseModalArrayList.add(new CourseModal("UX285", "Human meets Artificial Intelligence", new String[] {"Friday"}, new String[] {"4:30pm", "7:30pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("UX285", "Human meets Artificial Intelligence", new String[] {"Friday"}, new String[] {"04:30pm", "07:30pm"}, R.drawable.laurierlogo));
         return courseModalArrayList;
     }
 
     private static ArrayList<CourseModal> loadMedCourses(ArrayList<CourseModal> courseModalArrayList) {
-        courseModalArrayList.add(new CourseModal("HE305", "Positive Psychology", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "8:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("HE305", "Positive Psychology", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("HE100", "Health Issues I", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("HE101", "Health Issues II", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("HE300", "Epidemiology", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
-        courseModalArrayList.add(new CourseModal("HN210", "Human Anatomy", new String[] {"Friday"}, new String[] {"4:30pm", "7:30pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("HN210", "Human Anatomy", new String[] {"Friday"}, new String[] {"04:30pm", "07:30pm"}, R.drawable.laurierlogo));
         return courseModalArrayList;
     }
 
     private static ArrayList<CourseModal> loadAFMCourses(ArrayList<CourseModal> courseModalArrayList) {
-        courseModalArrayList.add(new CourseModal("BU127", "Introduction to Financial Accounting", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "8:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("BU127", "Introduction to Financial Accounting", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("BU233", "Personal Finance", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("BU283", "Financial Management I", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("BU387", "Intermediate Accounting I", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
-        courseModalArrayList.add(new CourseModal("BU410", "Advanced Equity Analysis", new String[] {"Friday"}, new String[] {"4:30pm", "7:30pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("BU410", "Advanced Equity Analysis", new String[] {"Friday"}, new String[] {"04:30pm", "07:30pm"}, R.drawable.laurierlogo));
         return courseModalArrayList;
     }
 
     private static ArrayList<CourseModal> loadBioCourses(ArrayList<CourseModal> courseModalArrayList) {
-        courseModalArrayList.add(new CourseModal("BI236", "Cell Biology", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "8:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("BI236", "Cell Biology", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("BI326", "Bioinformatics", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("BI475", "Microbial Ecology", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
         courseModalArrayList.add(new CourseModal("BI111", "Biological Diversity and Evolution", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
-        courseModalArrayList.add(new CourseModal("BI266", "Life on Earth: Plants", new String[] {"Friday"}, new String[] {"4:30pm", "7:30pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("BI266", "Life on Earth: Plants", new String[] {"Friday"}, new String[] {"04:30pm", "07:30pm"}, R.drawable.laurierlogo));
         return courseModalArrayList;
     }
 }
