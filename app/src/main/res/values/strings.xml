@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Class Tinder</string>
     <string name="back_btn">Back</string>
-    <string name="calendar_title"><b>Your Schedule</b></string>
+    <string name="calendar_title"><b>Preview Schedule</b></string>
     <string name="calendar_monday">Monday</string>
     <string name="calendar_tuesday">Tuesday</string>
     <string name="calendar_wednesday">Wednesday</string>
