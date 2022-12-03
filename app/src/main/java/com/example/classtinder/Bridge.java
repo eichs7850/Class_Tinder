@@ -17,6 +17,6 @@ public class Bridge
         return obj;
     }
 
-    public Map<String, Pair<String[], String[]>> listOfCourses; // put your data structure here
+    public Map<String, Pair<String[], String[]>> listOfCourses;
 
 }
