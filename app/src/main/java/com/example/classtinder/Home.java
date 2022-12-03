@@ -12,18 +12,18 @@ public class Home extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        Button calendarButton = findViewById(R.id.calendarbtn);
+        //Button calendarButton = findViewById(R.id.calendarbtn);
         Button courseSelectionButton = findViewById(R.id.choosebtn);
         Button reselectProgramButton = findViewById(R.id.repickbtn);
         Button logOutButton = findViewById(R.id.Logoutbtn);
 
-        calendarButton.setOnClickListener(new View.OnClickListener() {
+        /* calendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Home.this, Calendar.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         courseSelectionButton.setOnClickListener(new View.OnClickListener() {
             @Override
