@@ -107,6 +107,23 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Integer result = (Integer) resultCode;
+        Log.d("HEY IDIOT THE RESULTCODE IS ", result.toString());
+        if(resultCode == 0) {
+            Intent intent = new Intent(MainActivity.this, Home.class);
+            startActivity(intent);
+            Toast.makeText(MainActivity.this, "Sign-In successful!", Toast.LENGTH_SHORT);
+        } else {
+            Toast.makeText(MainActivity.this, "Sign-In unsuccessful", Toast.LENGTH_SHORT);
+        }
+
+
+        // bad result
+        //do something
+    }
 /*    public void onActivityResult(){
         SignInCredential googleCredential = oneTapClient.getSignInCredentialFromIntent(data);
         String idToken = googleCredential.getGoogleIdToken();
@@ -154,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Log.i(ACTIVITY_NAME, "In onResume()");
     }
-    public void updateUI(FirebaseUser account){
+    public void updateUI(GoogleSignInAccount account){
 
         if(account != null){
             Toast.makeText(this,"You Signed In successfully",Toast.LENGTH_LONG).show();

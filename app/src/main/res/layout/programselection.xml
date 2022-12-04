@@ -6,13 +6,25 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/psychButton5"
+        android:id="@+id/helpBtn"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="44dp"
+        android:text="Help"
+        app:layout_constraintBottom_toTopOf="@+id/UXButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/titleYear2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buisnessBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Buisness"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,13 +34,13 @@
         app:layout_constraintVertical_bias="0.381" />
 
     <Button
-        android:id="@+id/psychButton6"
+        android:id="@+id/dataScienceBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Data Science"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,13 +50,13 @@
         app:layout_constraintVertical_bias="0.381" />
 
     <Button
-        android:id="@+id/psychButton7"
+        android:id="@+id/musicBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Music"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,13 +66,13 @@
         app:layout_constraintVertical_bias="0.381" />
 
     <Button
-        android:id="@+id/psychButton8"
+        android:id="@+id/strudelBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="German"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,13 +82,13 @@
         app:layout_constraintVertical_bias=".587" />
 
     <Button
-        android:id="@+id/psychButton9"
+        android:id="@+id/eduBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Education"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,13 +98,13 @@
         app:layout_constraintVertical_bias=".484" />
 
     <Button
-        android:id="@+id/psychButton13"
+        android:id="@+id/historyBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="History"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,13 +114,13 @@
         app:layout_constraintVertical_bias="0.690" />
 
     <Button
-        android:id="@+id/psychButton14"
+        android:id="@+id/financeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Finance"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -118,13 +130,13 @@
         app:layout_constraintVertical_bias=".587" />
 
     <Button
-        android:id="@+id/psychButton15"
+        android:id="@+id/gloStudies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Global Studies"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,13 +146,13 @@
         app:layout_constraintVertical_bias="0.690" />
 
     <Button
-        android:id="@+id/psychButton16"
+        android:id="@+id/kinBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Kin"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,13 +162,13 @@
         app:layout_constraintVertical_bias=".69" />
 
     <Button
-        android:id="@+id/psychButton10"
+        android:id="@+id/baguetteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="French"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -166,13 +178,13 @@
         app:layout_constraintVertical_bias=".484" />
 
     <Button
-        android:id="@+id/psychButton11"
+        android:id="@+id/filmBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Film"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -182,13 +194,13 @@
         app:layout_constraintVertical_bias=".484" />
 
     <Button
-        android:id="@+id/psychButton12"
+        android:id="@+id/crewritinBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/default_button"
         android:backgroundTint="@color/black"
-        android:text="Psych"
+        android:text="Creative Writing"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -317,12 +329,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/psychButton15" />
+        app:layout_constraintTop_toBottomOf="@+id/gloStudies" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="80dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="7dp"
         android:text="Back"
         app:layout_constraintBottom_toTopOf="@+id/PsychButton"
@@ -332,22 +344,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.438" />
 
-    <TextView
-        android:id="@+id/progSelection"
-        android:layout_width="143dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="134dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="134dp"
-        android:layout_marginBottom="21dp"
-        android:text="Selected"
-        android:textSize="60px"
+    <CheckBox
+        android:id="@+id/isDoubleDegree"
+        android:layout_width="173dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="9dp"
+        android:text="I'm a double degree!"
         app:layout_constraintBottom_toTopOf="@+id/SwipePage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/psychButton15"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/gloStudies" />
+
+    <TextView
+        android:id="@+id/progSelection"
+        android:layout_width="226dp"
+        android:layout_height="27dp"
+        android:gravity="center"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/CompSciButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleYear2"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
