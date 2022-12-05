@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Pair;
 import android.widget.Toast;
 
@@ -25,9 +26,18 @@ public class Swipe extends Activity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("your_prefs", Context.MODE_PRIVATE);
 
-        int program = sharedPreferences.getInt("selected_program", -1);
+        Integer program = sharedPreferences.getInt("selected_program", -1);
+        Integer secondProgram = sharedPreferences.getInt("selected_program2", -1);
         courseModalArrayList = new ArrayList<>();
         SwipeDeck cardStack = findViewById(R.id.swipe_deck);
+
+//        editor.putInt("selected_program", selectedPrograms[1]);
+//        //if double degree
+//        if(doubleDegree) {
+//            editor.putInt("selected_program2", selectedPrograms[0]);
+//        } else {
+//            editor.putInt("selected_program2", -1);
+//        }
 
         if(program == -1 || program == 0) {
             Toast.makeText(Swipe.this, "No Program Selected, Sending to Program Selection", Toast.LENGTH_SHORT).show();
@@ -54,6 +64,67 @@ public class Swipe extends Activity {
         if (program == 5) {
             courseModalArrayList = loadBioCourses(courseModalArrayList);
         }
+
+        if(program == 6) {
+            courseModalArrayList = loadPsychCourses(courseModalArrayList);
+        }
+
+        if(program == 7) {
+            courseModalArrayList = loadBizCourses(courseModalArrayList);
+        }
+
+        if(program == 8) {
+            courseModalArrayList = loadDataCourses(courseModalArrayList);
+        }
+
+        if(program == 9) {
+            courseModalArrayList = loadMusicCourses(courseModalArrayList);
+        }
+
+        if(program == 10) {
+            courseModalArrayList = loadEduCourses(courseModalArrayList);
+        }
+
+        if(secondProgram == 1) {
+            courseModalArrayList = loadCSCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 2) {
+            courseModalArrayList = loadUXCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 3) {
+            courseModalArrayList = loadMedCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 4) {
+            courseModalArrayList = loadAFMCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 5) {
+            courseModalArrayList = loadBioCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 6) {
+            courseModalArrayList = loadPsychCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 7) {
+            courseModalArrayList = loadBizCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 8) {
+            courseModalArrayList = loadDataCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 9) {
+            courseModalArrayList = loadMusicCourses(courseModalArrayList);
+        }
+
+        if (secondProgram == 10) {
+            courseModalArrayList = loadEduCourses(courseModalArrayList);
+        }
+
 
         final DeckAdapter adapter = new DeckAdapter(courseModalArrayList, this);
 
@@ -134,5 +205,48 @@ public class Swipe extends Activity {
         courseModalArrayList.add(new CourseModal("BI266", "Life on Earth: Plants", new String[] {"Friday"}, new String[] {"04:30pm", "07:30pm"}, R.drawable.laurierlogo));
         return courseModalArrayList;
     }
-}
 
+    private static ArrayList<CourseModal> loadPsychCourses(ArrayList<CourseModal> courseModalArrayList) {
+        courseModalArrayList.add(new CourseModal("PS101", "Introduction to Psychology I", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("PS102", "Introduction to Psychology II", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("PS260", "Introduction to Cognitive Psychology", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("PS280", "Abnormal Psychology", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("PS295", "Introduction to Research Methods", new String[] {"Friday"}, new String[] {"04:30pm", "07:30pm"}, R.drawable.laurierlogo));
+        return courseModalArrayList;
+    }
+
+    private static ArrayList<CourseModal> loadBizCourses(ArrayList<CourseModal> courseModalArrayList) {
+        courseModalArrayList.add(new CourseModal("BU111", "Understanding the Business Environment", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("BU205", "Introduction to Applied Statistics", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("BU482", "Sales Management", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("BU487", "Advanced Accounting", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("ENTR200", "The Entrepreneurial Method", new String[] {"Friday"}, new String[] {"04:30pm", "07:30pm"}, R.drawable.laurierlogo));
+        return courseModalArrayList;
+    }
+
+    private static ArrayList<CourseModal> loadDataCourses(ArrayList<CourseModal> courseModalArrayList) {
+        courseModalArrayList.add(new CourseModal("DATA100", "Introduction to Data Analytics", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("DATA200", "Data Analytics", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("DATA490", "Special Topics in Data Science", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("DATA495", "Directed Research in Data Science", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
+        return courseModalArrayList;
+    }
+
+    private static ArrayList<CourseModal> loadMusicCourses(ArrayList<CourseModal> courseModalArrayList) {
+        courseModalArrayList.add(new CourseModal("MU161", "Theory I", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("MU162", "Theory II", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("MU240", "CM Foundations", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("MU352", "Principles of Music Therapy", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("MU383", "Chamber Music", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
+        return courseModalArrayList;
+    }
+
+    private static ArrayList<CourseModal> loadEduCourses(ArrayList<CourseModal> courseModalArrayList) {
+        courseModalArrayList.add(new CourseModal("EU411", "Foundations of Mathematics for Teaching", new String[] {"Monday", "Wednesday", "Friday"}, new String[] {"08:00am", "08:50am"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("EU422I", "Teaching for the Arts J/I", new String[] {"Monday", "Wednesday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("EU422P", "Teaching for the Arts P/J", new String[] {"Tuesday", "Thursday"}, new String[] {"04:30pm", "05:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("EU434", "Global Education", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
+        courseModalArrayList.add(new CourseModal("EU438", "Gifted Education", new String[] {"Tuesday", "Thursday"}, new String[] {"07:30pm", "08:50pm"}, R.drawable.laurierlogo));
+        return courseModalArrayList;
+    }
+}
