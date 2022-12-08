@@ -1,0 +1,104 @@
+@startuml
+class com.example.classtinder.ProgramSelection {
+~ int selectedProgram
++ int[] selectedPrograms
+~ boolean doubleDegree
+# void onCreate(Bundle)
++ void onClick(View)
++ void shift(int[],int)
+}
+class com.example.classtinder.Home {
+# void onCreate(Bundle)
+}
+class com.example.classtinder.Bridge {
+~ {static} Bridge obj
++ Map<String,Pair<String[],String[]>> listOfCourses
++ {static} Bridge instance()
+}
+class com.example.classtinder.Year {
+# void onCreate(Bundle)
+}
+class com.example.classtinder.Swipe {
+- ArrayList<CourseModal> courseModalArrayList
+~ Map<String,Pair<String[],String[]>> listOfCourses
+# void onCreate(Bundle)
+- {static} ArrayList<CourseModal> loadCSCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadUXCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadMedCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadAFMCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadBioCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadPsychCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadBizCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadDataCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadMusicCourses(ArrayList<CourseModal>)
+- {static} ArrayList<CourseModal> loadEduCourses(ArrayList<CourseModal>)
+}
+class com.example.classtinder.MainActivity {
+# {static} String ACTIVITY_NAME
+- GoogleSignInClient googleSignInClient
+~ FirebaseAuth mAuth
++ int RC_SIGN_IN
+# void onCreate(Bundle)
++ void signIn()
+# void onActivityResult(int,int,Intent)
+# void onResume()
++ void updateUI(GoogleSignInAccount)
++ void onStart()
+# void onPause()
+# void onStop()
+# void onDestroy()
+# boolean isEmailValid(String)
+# boolean isPasswordValid(String)
+}
+class com.example.classtinder.DeckAdapter {
+- ArrayList<CourseModal> courseData
+- Context context
++ int getCount()
++ Object getItem(int)
++ long getItemId(int)
++ View getView(int,View,ViewGroup)
+}
+class com.example.classtinder.ExampleUnitTest {
++ void addition_isCorrect()
+}
+class com.example.classtinder.Calendar {
+# void onCreate(Bundle)
+}
+class com.example.classtinder.BuildConfig {
++ {static} boolean DEBUG
++ {static} String APPLICATION_ID
++ {static} String BUILD_TYPE
++ {static} int VERSION_CODE
++ {static} String VERSION_NAME
+}
+class com.example.classtinder.ExampleInstrumentedTest {
++ void useAppContext()
+}
+class com.example.classtinder.CourseModal {
+- String courseName
+- String[] courseTimes
+- String[] courseDays
+- String courseDescription
+- int imgId
++ int getImgId()
++ void setImgId(int)
++ String getCourseName()
++ void setCourseName(String)
++ void setCourseTimes(String[])
++ String[] getCourseTimes()
++ void setCourseDays(String[])
++ String[] getCourseDays()
++ String getCourseDescription()
++ void setCourseDescription(String)
+}
+
+
+com.example.classtinder.OnClickListener <|.. com.example.classtinder.ProgramSelection
+android.app.Activity <|-- com.example.classtinder.ProgramSelection
+android.app.Activity <|-- com.example.classtinder.Home
+android.app.Activity <|-- com.example.classtinder.Year
+android.app.Activity <|-- com.example.classtinder.Swipe
+androidx.appcompat.app.AppCompatActivity <|-- com.example.classtinder.MainActivity
+android.widget.BaseAdapter <|-- com.example.classtinder.DeckAdapter
+android.app.Activity <|-- com.example.classtinder.Calendar
+@enduml
